@@ -1,6 +1,6 @@
 RSpec.describe 'GET /api/articles', type: :request do
   # ARRANGE
-  let!(:aricles) { create_list(:article, 5) }
+  let!(:articles) { create_list(:article, 5) }
   before do
     # ACT
     get '/api/articles'

@@ -3,3 +3,4 @@ class Api::PingsController < ApplicationController
     render json: { message: 'pong' }
   end
 end
+

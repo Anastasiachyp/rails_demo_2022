@@ -4,3 +4,4 @@ RSpec.describe Api::PingsController do
     expect(response_json['message']).to eq 'pong'
   end
 end
+ 
