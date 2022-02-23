@@ -10,8 +10,8 @@ class Api::ArticlesController < ApplicationController
   end
 
   def create
-    new_article = Article.create(article_params)
-    render json: { article: new_article }, status: 201
+    article = Article.create(article_params)
+    render json: { article: article }, status: 201
   end
 
   private
