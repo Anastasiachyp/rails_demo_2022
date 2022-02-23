@@ -10,10 +10,13 @@ class Api::ArticlesController < ApplicationController
   end
 
   def create
-    new_article = Article.new
-    new_article.title = params[:article][:title]
-    new_article.body = params[:article][:body]
-    new_article.save
+    new_article = Article.create(article_params)
     render json: { article: new_article }, status: 201
+  end
+
+  private
+
+  def article_params
+    params[:article].permit(:title, :body)
   end
 end
