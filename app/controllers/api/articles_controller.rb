@@ -9,5 +9,4 @@ class Api::ArticlesController < ApplicationController
     article = Article.find(params[:id])
     render json: { article: article }
   end
-
 end
