@@ -30,3 +30,5 @@
 
 #Ignore folder mac
 .DS_Store
+
+coverage/
