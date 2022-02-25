@@ -8,11 +8,13 @@ gem 'puma', '~> 5.0'
 gem 'rails', '~> 7.0.2', '>= 7.0.2.2'
 
 gem 'bootsnap', require: false
+gem 'devise_token_auth', '>= 1.2.0', git: 'https://github.com/lynndylanhurley/devise_token_auth'
 gem 'rack-cors'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
   gem 'factory_bot_rails'
+  gem 'faker'
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
