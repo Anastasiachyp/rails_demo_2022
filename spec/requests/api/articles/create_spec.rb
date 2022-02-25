@@ -1,6 +1,7 @@
 RSpec.describe 'POST /api/articles' do
+  let(:user) { create(:user) }
+  let(:credentials) { user.create_new_auth_token }
   subject { response }
-  let(:credentials) {{}}
 
   describe 'with valid params' do
     before do
