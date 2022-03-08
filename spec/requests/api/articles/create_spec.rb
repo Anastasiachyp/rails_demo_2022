@@ -29,6 +29,7 @@ RSpec.describe 'POST /api/articles' do
         article: { title: 'News about coding', body: 'Lorem ipsum...' }
       }, headers: nil
     end
+    
     it { is_expected.to have_http_status 401 }
   end
 end
