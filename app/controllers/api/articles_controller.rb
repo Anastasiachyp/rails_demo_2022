@@ -12,6 +12,7 @@ class Api::ArticlesController < ApplicationController
 
   def create
     article = Article.create(article_params)
+    article.attach_image(params[:article][:image])
     render json: { article: article }, status: 201
   end
 
