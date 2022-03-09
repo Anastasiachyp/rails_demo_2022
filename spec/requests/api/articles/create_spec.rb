@@ -7,7 +7,11 @@ RSpec.describe 'POST /api/articles' do
   describe 'with valid params' do
     before do
       post '/api/articles', params: {
-        article: { title: 'News about coding', body: 'Lorem ipsum...', image: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0oAAAJHCAYAAACu' }
+        article: {
+          title: 'News about coding',
+          body: 'Lorem ipsum...',
+          image: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0oAAAJHCAYAAACu'
+        }
       }, headers: credentials
 
       @article = Article.last
@@ -29,7 +33,7 @@ RSpec.describe 'POST /api/articles' do
         article: { title: 'News about coding', body: 'Lorem ipsum...' }
       }, headers: nil
     end
-    
+
     it { is_expected.to have_http_status 401 }
   end
 end
